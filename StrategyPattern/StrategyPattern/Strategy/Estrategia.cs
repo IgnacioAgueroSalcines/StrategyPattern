@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern
 {
-    public class Gallego:Castellano
+    public class Estrategia
     {
+        public String filtro(String s)
+        {
+            return s;
+        }
     }
 }

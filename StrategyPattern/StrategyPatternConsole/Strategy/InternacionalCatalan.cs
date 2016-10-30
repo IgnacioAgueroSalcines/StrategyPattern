@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern
 {
-    public class Castellano:Soporte
+    class InternacionalCatalan : Estrategia
     {
     }
 }
