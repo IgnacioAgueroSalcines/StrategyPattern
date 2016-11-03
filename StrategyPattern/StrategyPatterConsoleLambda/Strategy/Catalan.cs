@@ -10,7 +10,7 @@ namespace StrategyPattern
     {
         public override String filtro(String s)
         {//ñ por ny
-            return s.Replace("ñ", "ny");
+            return s.Replace("ñ","ny");
         }
     }
 }

@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern
 {
-   public  class Catalan:Estrategia
+    public class Gallego:Estrategia
     {
         public override String filtro(String s)
-        {//ñ por ny
-            return s.Replace("ñ", "ny");
+        {//ñ por nh
+            return s.Replace("ñ", "nh");
         }
+       
     }
 }

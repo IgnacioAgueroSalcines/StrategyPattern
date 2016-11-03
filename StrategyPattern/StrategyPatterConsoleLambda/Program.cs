@@ -57,25 +57,25 @@ namespace StrateyPatternConsole
         {
             Estrategia est = new InternacionalCatalan();
             //inicio creacion del arbol
-            Archivo arc = new Archivo("sueño", 5, est);
-            Archivo arc2 = new Archivo("árbol", 5, est);
-            Directorio composite = new Directorio("root", est);
-            Directorio composite2 = new Directorio("pájaro", est);
-            Comprimido composite3 = new Comprimido("contenedor", est);
-            EnlaceDirecto e = new EnlaceDirecto(arc2, est);
+            Archivo arc = new Archivo("sueño", 5, est.filtro);
+            Archivo arc2 = new Archivo("árbol", 5, est.filtro);
+            Directorio composite = new Directorio("root", est.filtro);
+            Directorio composite2 = new Directorio("pájaro", est.filtro);
+            Comprimido composite3 = new Comprimido("contenedor", est.filtro);
+            EnlaceDirecto e = new EnlaceDirecto(arc2, est.filtro);
 
             composite.addComponente(e);
             composite.addComponente(arc);
             composite.addComponente(composite2);
-            composite.addComponente(new Archivo("ñojá5", 10, est));
+            composite.addComponente(new Archivo("ñojá5", 10, est.filtro));
 
-            composite2.addComponente(new Archivo("hoja3", 5, est));
+            composite2.addComponente(new Archivo("hoja3", 5, est.filtro));
             composite2.addComponente(composite3);
-            composite2.addComponente(new Archivo("áááááá", 10, est));
+            composite2.addComponente(new Archivo("áááááá", 10, est.filtro));
 
-            composite3.addComponente(new Archivo("ééééé", 5, est));
-            composite3.addComponente(new Archivo("ííííí", 5, est));
-            composite3.addComponente(new Archivo("óóóóó", 10, est));
+            composite3.addComponente(new Archivo("ééééé", 5, est.filtro));
+            composite3.addComponente(new Archivo("ííííí", 5, est.filtro));
+            composite3.addComponente(new Archivo("óóóóó", 10, est.filtro));
 
 
 
