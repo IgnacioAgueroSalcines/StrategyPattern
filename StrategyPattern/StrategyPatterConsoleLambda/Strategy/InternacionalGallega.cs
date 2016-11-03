@@ -12,17 +12,7 @@ namespace StrategyPattern
         public override String filtro(String s)
         {//ñ por nh
             String res = "";
-            foreach (Char a in s)
-            {
-                if (a.Equals('ñ'))
-                {
-                    res += "nh";
-                }
-                else
-                {
-                    res += a;
-                }
-            }
+            res= s.Replace("ñ", "nh");
             return base.QuitAccents(res);
         }
 

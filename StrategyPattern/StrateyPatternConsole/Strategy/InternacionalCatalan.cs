@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace StrategyPattern
 {
-    class InternacionalCatalan : Estrategia
+    public class InternacionalCatalan : Estrategia
     {
         public override String filtro(String s)
         {//ñ por ny
