@@ -55,11 +55,7 @@
   <ItemGroup>
     <Compile Include="CompositeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Strategy\CastellanoTests.cs" />
-    <Compile Include="Strategy\CatalanTests.cs" />
-    <Compile Include="Strategy\GallegoTests.cs" />
-    <Compile Include="Strategy\InternacionalCatalanTests.cs" />
-    <Compile Include="Strategy\InternacionalGallegaTests.cs" />
+    <Compile Include="FIltroTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StrategyPatterConsoleLambda\StrategyPatterConsoleLambda.csproj">

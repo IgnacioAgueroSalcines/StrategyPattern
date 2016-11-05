@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrateyPatternConsole", "StrateyPatternConsole\StrateyPatternConsole.csproj", "{EC1C818A-4AE2-41A7-B4DC-A76621A487CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPatternConsole", "StrateyPatternConsole\StrategyPatternConsole.csproj", "{EC1C818A-4AE2-41A7-B4DC-A76621A487CF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPatterConsoleLambda", "StrategyPatterConsoleLambda\StrategyPatterConsoleLambda.csproj", "{4C05E4A1-502C-47FD-ACDF-D8E790BFE0BB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPatterConsoleLambdaTests", "StrategyPatterConsoleLambdaTests\StrategyPatterConsoleLambdaTests.csproj", "{2EF154A0-2D9E-4C72-B2EC-CDA115710CCB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrateyPatternConsoleTests", "StrateyPatternConsoleTests\StrateyPatternConsoleTests.csproj", "{CB30AFEE-25F9-4C14-A284-5A46570E29EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPatternConsoleTests", "StrateyPatternConsoleTests\StrategyPatternConsoleTests.csproj", "{CB30AFEE-25F9-4C14-A284-5A46570E29EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

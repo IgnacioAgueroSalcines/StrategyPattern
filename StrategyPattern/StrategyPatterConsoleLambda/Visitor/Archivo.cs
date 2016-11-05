@@ -1,4 +1,4 @@
-﻿using StrategyPattern;
+﻿
 using System;
 using VisitorPattern;
 

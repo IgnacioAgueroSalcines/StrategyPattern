@@ -3,7 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Composite;
-using StrategyPattern;
+
 
 namespace StrategyPatterConsoleLambdaTests
 {
@@ -19,21 +19,21 @@ namespace StrategyPatterConsoleLambdaTests
         [TestInitialize()]
         public void startUp()
         {
-            Estrategia est = new InternacionalCatalan();
+            
 
-            borrar = new Archivo("hoja4", 5,est.filtro);
-            composite = new Directorio("root", est.filtro);
-            Composite.Composite composite2 = new Directorio("dir", est.filtro);
-            Composite.Composite composite3 = new Comprimido("comp", est.filtro);
+            borrar = new Archivo("hoja4", 5,x=>x);
+            composite = new Directorio("root", x => x);
+            Composite.Composite composite2 = new Directorio("dir", x => x);
+            Composite.Composite composite3 = new Comprimido("comp", x => x);
 
 
-            composite3.addComponente(new Archivo("hoja1", 5, est.filtro));
-            composite3.addComponente(new Archivo("hoja2", 5, est.filtro));
+            composite3.addComponente(new Archivo("hoja1", 5, x => x));
+            composite3.addComponente(new Archivo("hoja2", 5, x => x));
 
-            composite2.addComponente(new Archivo("hoja3", 5, est.filtro));
+            composite2.addComponente(new Archivo("hoja3", 5, x => x));
             composite2.addComponente(composite3);
 
-            EnlaceDirecto e = new EnlaceDirecto(composite2, est.filtro);
+            EnlaceDirecto e = new EnlaceDirecto(composite2, x => x);
 
             composite.addComponente(borrar);
             composite.addComponente(composite2);

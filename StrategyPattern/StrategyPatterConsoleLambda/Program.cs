@@ -1,7 +1,6 @@
 ﻿using System;
 
 using Composite;
-using StrategyPattern;
 
 using VisitorPattern;
 using System.Collections.Generic;
@@ -32,50 +31,31 @@ namespace StrateyPatternConsole
         }
 
         
-        // Metodo auxiliar para visualizar el contenido de una lista por consola
-        private static String serializaLista<T>(List<T> listaElementos)
-        {
-            StringBuilder result = new StringBuilder("[");
-
-            if (listaElementos.Count > 0)
-            {
-
-                for (int i = 0; i < listaElementos.Count - 1; i++)
-                {
-                    result.Append(listaElementos[i] + ", ");
-                } // for
-
-                result.Append(listaElementos[listaElementos.Count - 1]);
-            } // if
-
-            result.Append("]");
-
-            return result.ToString();
-        } // serializaLista
+       
 
         public static Directorio inicialize()
         {
-            Estrategia est = new InternacionalCatalan();
+            
             //inicio creacion del arbol
-            Archivo arc = new Archivo("sueño", 5, est.filtro);
-            Archivo arc2 = new Archivo("árbol", 5, est.filtro);
-            Directorio composite = new Directorio("root", est.filtro);
-            Directorio composite2 = new Directorio("pájaro", est.filtro);
-            Comprimido composite3 = new Comprimido("contenedor", est.filtro);
-            EnlaceDirecto e = new EnlaceDirecto(arc2, est.filtro);
+            Archivo arc = new Archivo("sueño", 5, x=>x.Replace("ñ","nh"));
+            Archivo arc2 = new Archivo("árbol", 5, x => x.Replace("ñ", "nh"));
+            Directorio composite = new Directorio("root", x => x.Replace("ñ" ,"nh"));
+            Directorio composite2 = new Directorio("pájaro", x => x.Replace("ñ", "nh"));
+            Comprimido composite3 = new Comprimido("contenedor", x => x.Replace("ñ", "nh"));
+            EnlaceDirecto e = new EnlaceDirecto(arc2, x => x.Replace("ñ", "nh"));
 
             composite.addComponente(e);
             composite.addComponente(arc);
             composite.addComponente(composite2);
-            composite.addComponente(new Archivo("ñojá5", 10, est.filtro));
+            composite.addComponente(new Archivo("ñojá5", 10, x => x.Replace("ñ", "nh")));
 
-            composite2.addComponente(new Archivo("hoja3", 5, est.filtro));
+            composite2.addComponente(new Archivo("hoja3", 5, x => x.Replace("ñ", "nh")));
             composite2.addComponente(composite3);
-            composite2.addComponente(new Archivo("áááááá", 10, est.filtro));
+            composite2.addComponente(new Archivo("áááááá", 10, x => x.Replace("ñ", "nh")));
 
-            composite3.addComponente(new Archivo("ééééé", 5, est.filtro));
-            composite3.addComponente(new Archivo("ííííí", 5, est.filtro));
-            composite3.addComponente(new Archivo("óóóóó", 10, est.filtro));
+            composite3.addComponente(new Archivo("ééééé", 5, x => x.Replace("ñ", "nh")));
+            composite3.addComponente(new Archivo("ííííí", 5, x => x.Replace("ñ", "nh")));
+            composite3.addComponente(new Archivo("óóóóó", 10, x => x.Replace("ñ", "nh")));
 
 
 

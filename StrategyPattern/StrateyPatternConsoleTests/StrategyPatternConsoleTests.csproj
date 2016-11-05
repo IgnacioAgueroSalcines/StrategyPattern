@@ -60,9 +60,9 @@
     <Compile Include="Strategy\InternacionalGallegaTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\StrateyPatternConsole\StrateyPatternConsole.csproj">
+    <ProjectReference Include="..\StrateyPatternConsole\StrategyPatternConsole.csproj">
       <Project>{EC1C818A-4AE2-41A7-B4DC-A76621A487CF}</Project>
-      <Name>StrateyPatternConsole</Name>
+      <Name>StrategyPatternConsole</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
